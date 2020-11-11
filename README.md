@@ -1,5 +1,5 @@
 ## Windows OS
-#### Prerequisite
+#### Prerequisites
 - [ ] Install cmake https://cmake.org/install/
 - [ ] VS tools
 
@@ -13,7 +13,7 @@ or
 ```
 
 ## Linux
-#### Prerequisite
+#### Prerequisites
 ubuntu linux
 ```
 sudo apt install -y cmake make g++
