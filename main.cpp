@@ -16,7 +16,8 @@ int main(int argc, char* argv[], char* envp[]) {
         std::cout << std::endl;
         std::cout << "Usage: validatejwt[.exe]    [file..]" << '\t' << "Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
         std::cout << "   or: validatejwt[.exe] -v [file..]" << '\t' << "Enable verbose mode. Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
-        std::cout << "   or: validatejwt[.exe]    [file..] [mrsigner] [productid] [mrenclave] [securityversion]" << std::endl;
+        std::cout << "   or: validatejwt[.exe]    [file..] [certificate]" << std::endl;
+        std::cout << "   or: validatejwt[.exe]    [file..] [certificate] [mrsigner] [productid] [mrenclave] [securityversion]" << std::endl;
         std::cout << std::endl;
         std::cout << "Arguments:" << std::endl;
         std::cout << '\t' << "-v or --verbose" << '\t' << "Enable verbose mode" << std::endl;
@@ -30,10 +31,11 @@ int main(int argc, char* argv[], char* envp[]) {
     }
 
     std::string jwt_file_name = get_value(1, argvec, verbose, "Validating filename", "default_filename");
-    std::string mrsigner = get_value(2, argvec, verbose, "Expected MrSigner", "");
-    std::string prodid = get_value(3, argvec, verbose, "Expected ProductId", "");
-    std::string mrenclave = get_value(4, argvec, verbose, "Expected MrEnclave", "");
-    std::string securityver = get_value(5, argvec, verbose, "Expected SecurityVersion", "");
+    std::string cert = get_value(2, argvec, verbose, "Certificate", "");
+    std::string mrsigner = get_value(3, argvec, verbose, "Expected MrSigner", "");
+    std::string prodid = get_value(4, argvec, verbose, "Expected ProductId", "");
+    std::string mrenclave = get_value(5, argvec, verbose, "Expected MrEnclave", "");
+    std::string securityver = get_value(6, argvec, verbose, "Expected SecurityVersion", "");
 
     // WRITE ME
 
