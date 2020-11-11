@@ -16,7 +16,7 @@ else {
     $msbuildpath = $Args[0]
 }
 Set-Item -Path Env:Path -Value ($Env:Path + $msbuildpath)
-msbuild validatejwt.sln
+msbuild maavalidatejwt.sln
 cd .\Debug
-.\validatejwt.exe
+.\maavalidatejwt.exe
 cd $curdir

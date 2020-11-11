@@ -5,7 +5,7 @@ bool is_verbose(const std::vector<std::string>& argvec);
 std::string get_value(int idx, const std::vector<std::string> & argvec, bool verbose, const std::string & argname, const std::string & default_value);
 
 int main(int argc, char* argv[], char* envp[]) {
-    std::cout << std::endl << "I'm alive..." << std::endl;
+    //std::cout << std::endl << "I'm alive..." << std::endl;
 
     std::vector<std::string> argvec(argc, "");
     for (int count = 0; count < argc; count++)
@@ -14,7 +14,18 @@ int main(int argc, char* argv[], char* envp[]) {
     bool verbose = is_verbose(argvec);
     if (argvec.size() < 2 || argvec[1] == "--help" || argvec[1] == "-h" || (argvec.size() < 3 && verbose)) {
         std::cout << std::endl;
-        std::cout << "Usage: validatejwt[.exe]    [file..]" << '\t' << "Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
+        std::cout << "Usage: maavalidatejwt [options] file" << std::endl;
+        std::cout << std::endl;
+        std::cout << "Arguments:" << std::endl;
+        std::cout << "    -mrsigner <value>        Verify MAA MRSIGNER value is <value>" << std::endl;
+        std::cout << "    -mrenclave <value>       Verify MAA MRENCLAVE value is <value>" << std::endl;
+        std::cout << "    -productid <value>       Verify MAA PRODUCTID value is <value>" << std::endl;
+        std::cout << "    -svn <value>             Verify MAA SVN value is <value>" << std::endl;
+        std::cout << "    -isdebuggable <value>    Verify MAA ISDEBUGGAble value is <value>" << std::endl;
+        std::cout << "    -v or --verbose          Include verbose messages during validation" << std::endl;
+        std::cout << "    -h or --help             Print Help (this message) and exit" << std::endl;
+        std::cout << std::endl;
+/*         std::cout << "Usage: validatejwt[.exe]    [file..]" << '\t' << "Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
         std::cout << "   or: validatejwt[.exe] -v [file..]" << '\t' << "Enable verbose mode. Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
         std::cout << "   or: validatejwt[.exe]    [file..] [certificate]" << std::endl;
         std::cout << "   or: validatejwt[.exe]    [file..] [certificate] [mrsigner] [productid] [mrenclave] [securityversion]" << std::endl;
@@ -22,7 +33,7 @@ int main(int argc, char* argv[], char* envp[]) {
         std::cout << "Arguments:" << std::endl;
         std::cout << '\t' << "-v or --verbose" << '\t' << "Enable verbose mode" << std::endl;
         std::cout << '\t' << "-h or --help" << '\t' << "Print Help (this message) and exit" << std::endl;
-
+ */
         exit(EXIT_SUCCESS);
     }
 
