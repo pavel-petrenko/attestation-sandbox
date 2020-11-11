@@ -4,7 +4,7 @@
 ```
 or
 ```
-.\build_and_run_on_win.ps1 PATH_TO_MSBUILD_BINARY
+.\build_and_run_on_win.ps1 PATH_TO_MSBUILD.EXE
 
 ```
 
