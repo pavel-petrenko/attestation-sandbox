@@ -7,4 +7,4 @@ mkdir out
 cd out/
 cmake ../
 make
-./validatejwt.exe
+./maavalidatejwt.exe
