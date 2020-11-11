@@ -1,14 +1,23 @@
-## Build and Run on Windows
+## Windows OS
+#### Prerequisite Checklist
+- [ ] cmake https://cmake.org/install/
+- [ ] VS tools
+
+#### Build and Run
 ```
 .\build_and_run_on_win.ps1
 ```
 or
 ```
-.\build_and_run_on_win.ps1 PATH_TO_MSBUILD_BINARY
-
+.\build_and_run_on_win.ps1 PATH_TO_MSBUILD.EXE
 ```
 
-## Build and Run on Linux
+## Linux
+#### Prerequisite Checklist
+- [ ] cmake
+- [ ] make
+- [ ] c++ compiler
+#### Build and Run
 ```
 ./build_and_run_on_linux.sh
 ```
