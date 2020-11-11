@@ -14,9 +14,9 @@ int main(int argc, char* argv[], char* envp[]) {
     bool verbose = is_verbose(argvec);
     if (argvec.size() < 2 || argvec[1] == "--help" || argvec[1] == "-h" || (argvec.size() < 3 && verbose)) {
         std::cout << std::endl;
-        std::cout << "Usage: validate[.exe]    [file..]" << '\t' << "Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
-        std::cout << "   or: validate[.exe] -v [file..]" << '\t' << "Enable verbose mode. Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
-        std::cout << "   or: validate[.exe]    [file..] [mrsigner] [productid] [mrenclave] [securityversion]" << std::endl;
+        std::cout << "Usage: validatejwt[.exe]    [file..]" << '\t' << "Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
+        std::cout << "   or: validatejwt[.exe] -v [file..]" << '\t' << "Enable verbose mode. Validate jwt token and return 0 (SUCCESS) or 1 (FAILURE)" << std::endl;
+        std::cout << "   or: validatejwt[.exe]    [file..] [mrsigner] [productid] [mrenclave] [securityversion]" << std::endl;
         std::cout << std::endl;
         std::cout << "Arguments:" << std::endl;
         std::cout << '\t' << "-v or --verbose" << '\t' << "Enable verbose mode" << std::endl;
