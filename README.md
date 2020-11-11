@@ -20,6 +20,6 @@ sudo apt install -y cmake make g++
 ```
 #### Build and Run
 ```
-sudo  chmod +x build_and_run_on_linux.sh
+sudo chmod +x build_and_run_on_linux.sh
 ./build_and_run_on_linux.sh
 ```
