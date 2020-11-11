@@ -9,7 +9,7 @@ cd $out
 cmake ..\
 $msbuildpath = ";C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin"
 Set-Item -Path Env:Path -Value ($Env:Path + $msbuildpath)
-msbuild ValidateMaaJwt.sln
+msbuild validatejwt.sln
 cd .\Debug
 .\validatejwt.exe
 cd $curdir
