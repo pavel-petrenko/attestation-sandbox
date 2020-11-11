@@ -1,6 +1,6 @@
 ## Windows OS
-#### Prerequisite Checklist
-- [ ] cmake https://cmake.org/install/
+#### Prerequisite
+- [ ] Install cmake https://cmake.org/install/
 - [ ] VS tools
 
 #### Build and Run
@@ -13,7 +13,7 @@ or
 ```
 
 ## Linux
-#### Prerequisite Checklist
+#### Prerequisite
 ubuntu linux
 ```
 sudo apt install -y cmake make g++
