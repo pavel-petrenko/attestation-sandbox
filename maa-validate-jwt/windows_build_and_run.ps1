@@ -9,12 +9,15 @@ If((Test-Path $out))
 New-Item -ItemType Directory -Force -Path $out
 cd $out 
 cmake ..\
-If($Args[0] -eq "") {
+
+$msbuildpath=$Args[0]
+
+If($msbuildpath -eq $null) {
     $msbuildpath = ";C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin"
 }
-else {
-    $msbuildpath = $Args[0]
-}
+
+echo "Temporary adding '$msbuildpath' to the PATH"
+
 Set-Item -Path Env:Path -Value ($Env:Path + $msbuildpath)
 msbuild maavalidatejwt.sln
 cd .\Debug
