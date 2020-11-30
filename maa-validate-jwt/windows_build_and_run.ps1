@@ -19,7 +19,7 @@ If($msbuildpath -eq $null) {
 echo "Temporary adding '$msbuildpath' to the PATH"
 
 Set-Item -Path Env:Path -Value ($Env:Path + $msbuildpath)
-msbuild maavalidatejwt.sln
+msbuild maa-validate-jwt.sln
 cd .\Debug
-.\maavalidatejwt.exe
+.\maa-validate-jwt.exe
 cd $curdir

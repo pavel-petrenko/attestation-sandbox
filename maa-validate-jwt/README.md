@@ -1,3 +1,11 @@
+## References 
+
+The code in this directory is copied/pasted and reimplemented from:
+* Greg Kostal's https://github.com/gkostal/attestation/tree/master/sgx.attest.sample/validatequotes.net
+* Larry Osterman's https://github.com/LarryOsterman/RetrieveAndVerifyMetadataCerts/tree/master/VerifyMetadataCertificates
+
+Thanks to Larry and Greg for the samples!
+
 ## Windows OS
 #### Prerequisites
 - [ ] Install cmake https://cmake.org/install/
